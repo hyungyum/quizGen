@@ -7,7 +7,7 @@ from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain_community.vectorstores import Chroma
 from dotenv import load_dotenv
 
-# load_dotenv()
+load_dotenv()
 
 def create_the_quiz_prompt_template():
     template = """
@@ -62,14 +62,14 @@ The format of the quiz could be one of the following:
     - Answers:
         - 1. True
 - Open-ended:
-- Questions:
-    <Question1>: 
-    <Question2>:
-- Answers:    
-    <Answer1>: <answer>
-    <Answer2>: <answer>
-Example:
-    Questions:
+    - Questions:
+        <Question1>: 
+        <Question2>:
+    - Answers:    
+        <Answer1>: <Answer>
+        <Answer2>: <Answer>
+    Example:
+    - Questions:
         - 1. What is a binary search tree? 
     - Answers: 
         - 1. A binary search tree is a data structure that is used to store data in a sorted manner.
